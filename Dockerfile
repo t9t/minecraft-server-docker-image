@@ -20,4 +20,4 @@ WORKDIR /world
 VOLUME /world
 EXPOSE 25565 25575
 
-CMD /mc/start.sh
+CMD ["/mc/start.sh"]
