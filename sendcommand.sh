@@ -1,8 +1,8 @@
 #!/bin/sh
 
-if [ $# -lt 2 ]; then
-  echo "Usage: sendcommand <password> <commands>"
+if [ $# -lt 1 ]; then
+  echo "Usage: sendcommand <command>"
   exit 1
 fi
 
-java -jar /mc/minecraft-rcon-client.jar 127.0.0.1:25575 "$@"
+echo $* > /minecraft_stdin

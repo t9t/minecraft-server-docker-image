@@ -10,12 +10,14 @@ RUN mkdir /mc
 
 ADD https://s3.amazonaws.com/Minecraft.Download/versions/${minecraft_version}/minecraft_server.${minecraft_version}.jar /mc/minecraft_server.jar
 ADD "https://search.maven.org/remotecontent?filepath=com/github/t9t/minecraft-rcon-client/minecraft-rcon-client/${rcon_client_version}/minecraft-rcon-client-${rcon_client_version}.jar" /mc/minecraft-rcon-client.jar
-ADD sendcommand.sh /mc/sendcommand.sh
+
+ADD rcon.sh sendcommand.sh start.sh /mc/
+
 RUN ln -s /mc/sendcommand.sh /usr/local/bin/sendcommand
+RUN ln -s /mc/rcon.sh /usr/local/bin/rcon
 
 WORKDIR /world
-
-EXPOSE 25565
-
-CMD java -Xms${JAVA_MIN_MEMORY} -Xmx${JAVA_MAX_MEMORY} -jar /mc/minecraft_server.jar nogui
 VOLUME /world
+EXPOSE 25565 25575
+
+CMD /mc/start.sh
