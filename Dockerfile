@@ -1,6 +1,6 @@
 FROM openjdk:jre-alpine
 
-ARG minecraft_version=1.11.2
+ARG minecraft_version=1.12
 ARG rcon_client_version=1.0.0
 
 ENV JAVA_MIN_MEMORY=128M

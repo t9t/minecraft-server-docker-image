@@ -1,4 +1,5 @@
 # Supported versions
+- 1.12 with tags: `1.12`, `latest`
 - 1.11.2 with tags: `1.11.2`, `1.11`, `latest`
 
 # Description
