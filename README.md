@@ -1,6 +1,6 @@
 # Supported versions
 - 1.12 with tags: `1.12`, `latest`
-- 1.11.2 with tags: `1.11.2`, `1.11`, `latest`
+- 1.11.2 with tags: `1.11.2`, `1.11`
 
 # Description
 - Docker hub page: https://hub.docker.com/r/t9t9t/minecraft-server/
